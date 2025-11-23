@@ -7,25 +7,20 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import lombok.*;
 
-
+@Builder
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter
 @Setter
-@Builder
 @Entity
-public class Flight {
+public class Purchase {
+
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
 
-    private String departure;
-    private String destination;
-
-    private Integer availableEconomySeat;
-    private Integer availableBusinessSeat;
-    private Integer availableFirstClassSeat;
+    private double amount;
 
 
 
