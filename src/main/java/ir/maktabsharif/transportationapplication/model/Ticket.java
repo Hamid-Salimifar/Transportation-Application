@@ -1,0 +1,27 @@
+package ir.maktabsharif.transportationapplication.model;
+
+
+import jakarta.persistence.*;
+import lombok.*;
+
+@AllArgsConstructor
+@NoArgsConstructor
+@Setter
+@Getter
+@Builder
+@Entity
+public class Ticket {
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Integer id;
+
+    private String type;
+
+    @Enumerated
+    private SeatClass seatClass;
+
+    @Enumerated
+    private TicketStatus ticketStatus;
+
+
+}
