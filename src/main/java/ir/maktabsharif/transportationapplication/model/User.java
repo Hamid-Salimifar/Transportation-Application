@@ -4,6 +4,9 @@ package ir.maktabsharif.transportationapplication.model;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.util.HashSet;
+import java.util.Set;
+
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter
@@ -23,6 +26,9 @@ public class User {
 
     @Enumerated
     private Role role;
+
+    @OneToMany(mappedBy = "user")
+    private Set<Flight> flight=new HashSet<>();
 
 
 }

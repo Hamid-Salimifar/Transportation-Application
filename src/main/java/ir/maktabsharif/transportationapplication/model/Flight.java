@@ -1,10 +1,7 @@
 package ir.maktabsharif.transportationapplication.model;
 
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.*;
 
 
@@ -26,6 +23,11 @@ public class Flight {
     private Integer availableEconomySeat;
     private Integer availableBusinessSeat;
     private Integer availableFirstClassSeat;
+
+
+    @ManyToOne
+    @JoinColumn(name = "user-id")
+    private User user;
 
 
 
