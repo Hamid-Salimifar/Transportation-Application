@@ -23,7 +23,7 @@ public class Purchase {
     private Ticket ticket;
 
     @ManyToOne
-    @JoinColumn(name = "user-id")
+    @JoinColumn(name = "user_id")
     private User user;
 
 

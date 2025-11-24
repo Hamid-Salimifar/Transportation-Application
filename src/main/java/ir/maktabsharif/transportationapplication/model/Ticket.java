@@ -24,11 +24,11 @@ public class Ticket {
     private TicketStatus ticketStatus;
 
     @ManyToOne
-    @JoinColumn(name = "flight-id")
+    @JoinColumn(name = "flight_id")
     private Flight flight;
 
     @OneToOne
-    @JoinColumn(name = "purchase-id")
+    @JoinColumn(name = "purchase_id")
     private Purchase purchase;
 
 

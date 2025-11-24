@@ -35,7 +35,7 @@ public class Flight {
     private List<Ticket> tickets;
 
     @ManyToOne
-    @JoinColumn(name = "user-id")
+    @JoinColumn(name = "user_id")
     private User user;
 
 
