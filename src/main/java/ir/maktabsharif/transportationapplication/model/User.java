@@ -3,6 +3,7 @@ package ir.maktabsharif.transportationapplication.model;
 
 import jakarta.persistence.*;
 import lombok.*;
+import org.springframework.boot.autoconfigure.pulsar.PulsarConnectionDetails;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -30,6 +31,9 @@ public class User {
 
     @OneToMany(mappedBy = "user")
     private Set<Flight> flight=new HashSet<>();
+
+    @OneToMany(mappedBy = "user")
+    private Set<Purchase> purchases;
 
 
 }

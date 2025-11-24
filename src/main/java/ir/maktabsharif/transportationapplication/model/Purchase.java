@@ -22,6 +22,10 @@ public class Purchase {
     @OneToOne(mappedBy = "purchase")
     private Ticket ticket;
 
+    @ManyToOne
+    @JoinColumn(name = "user-id")
+    private User user;
+
 
 
 }
