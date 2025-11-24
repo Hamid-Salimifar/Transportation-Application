@@ -23,5 +23,9 @@ public class Ticket {
     @Enumerated
     private TicketStatus ticketStatus;
 
+    @ManyToOne
+    @JoinColumn(name = "flight-id")
+    private Flight flight;
+
 
 }

@@ -4,6 +4,8 @@ package ir.maktabsharif.transportationapplication.model;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.util.List;
+
 
 @AllArgsConstructor
 @NoArgsConstructor
@@ -24,6 +26,13 @@ public class Flight {
     private Integer availableBusinessSeat;
     private Integer availableFirstClassSeat;
 
+    private double economyPrice;
+    private double businessPrice;
+    private double firstClassPrice;
+
+
+    @OneToMany(mappedBy = "flight")
+    private List<Ticket> tickets;
 
     @ManyToOne
     @JoinColumn(name = "user-id")
