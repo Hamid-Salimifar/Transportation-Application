@@ -4,6 +4,7 @@ package ir.maktabsharif.transportationapplication.model;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.time.LocalDate;
 import java.util.List;
 
 
@@ -21,6 +22,8 @@ public class Flight {
 
     private String departure;
     private String destination;
+
+    private LocalDate date;
 
     private Integer availableEconomySeat;
     private Integer availableBusinessSeat;
