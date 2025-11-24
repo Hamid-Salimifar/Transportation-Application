@@ -27,5 +27,9 @@ public class Ticket {
     @JoinColumn(name = "flight-id")
     private Flight flight;
 
+    @OneToOne
+    @JoinColumn(name = "purchase-id")
+    private Purchase purchase;
+
 
 }

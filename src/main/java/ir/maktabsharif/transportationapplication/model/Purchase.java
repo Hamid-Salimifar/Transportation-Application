@@ -1,10 +1,7 @@
 package ir.maktabsharif.transportationapplication.model;
 
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.*;
 
 @Builder
@@ -21,6 +18,9 @@ public class Purchase {
     private Integer id;
 
     private double amount;
+
+    @OneToOne(mappedBy = "purchase")
+    private Ticket ticket;
 
 
 
