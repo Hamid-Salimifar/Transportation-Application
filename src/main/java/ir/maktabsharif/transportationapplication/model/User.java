@@ -33,7 +33,7 @@ public class User {
     private Set<Flight> flight=new HashSet<>();
 
     @OneToMany(mappedBy = "user")
-    private Set<Purchase> purchases;
+    private Set<Purchase> purchases=new HashSet<>();
 
 
 }
