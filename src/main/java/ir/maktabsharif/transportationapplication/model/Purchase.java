@@ -17,7 +17,7 @@ public class Purchase {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
 
-    private double amount;
+
 
     @OneToOne(mappedBy = "purchase")
     private Ticket ticket;
