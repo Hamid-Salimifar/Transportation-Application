@@ -17,10 +17,10 @@ public class Ticket {
 
     private String type;
 
-    @Enumerated
+    @Enumerated(EnumType.STRING)
     private SeatClass seatClass;
 
-    @Enumerated
+    @Enumerated(EnumType.STRING)
     private TicketStatus ticketStatus;
 
     @ManyToOne
